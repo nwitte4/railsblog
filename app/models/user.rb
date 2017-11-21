@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   has_many :posts, dependent: :destroy
-  
+  has_many :comments, dependent: :destroy
+
   has_secure_password
   validates :username, :password, presence: true # username and password must be filled out
   validates :username, uniqueness: true # username is always unique
