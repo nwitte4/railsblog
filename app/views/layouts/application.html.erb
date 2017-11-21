@@ -10,17 +10,19 @@
 
   <body>
   <nav class="nav">
+    <% if logged_in? %>
     <%= link_to ' - Log Out -', '/logout', {method: 'post', local: true} if logged_in?%>
     <%= link_to ' Feed -', '/posts' %>
     <%= link_to ' My Blog -', '/' %>
     <button class="button right" type="button" name="button"><%= link_to 'New Blog Post', new_post_path %></button>
+    <% end %>
     <% if !logged_in? %>
-      <%= link_to 'Sign Up', '/signup' %>
-      <%= link_to 'Sign In', '/signin' %>
+      <%= link_to '- Sign Up - ', '/signup' %>
+      <%= link_to 'Sign In -', '/signin' %>
     <% end %>
   </nav>
 
-    <p id="notice"> <%= notice %></p>
+    <p class="center" id="notice"> <%= notice %></p>
     <%= yield %>
   </body>
 </html>

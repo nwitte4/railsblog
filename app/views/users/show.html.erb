@@ -2,8 +2,11 @@
 
 <h3 class="center">All Your Blog Posts</h3>
 
-<table>
+<% if !@posts.any? %>
+  <p class="center">Better get blogging!</p>
+<% end %>
 
+<table>
   <% @posts.each do |post| %>
     <tr class="text">
       <td><%= link_to post.title, post_path(post) %></td>

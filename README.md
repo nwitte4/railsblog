@@ -1,24 +1,23 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome to my blogging app!
 
-Things you may want to cover:
+If you're new here, please sign in first with a username and a password of your choosing:
+* Your password must be between 6 and 20 characters
+* Your username must be between 3 and 18 characters
 
-* Ruby version
+If you've been here before, just sign in with your username and password.
 
-* System dependencies
+Once you've signed in, blog away!
 
-* Configuration
+You can:
+* **C**reate blog posts
+* **R**ead blog posts
+* **U**pdate blog posts
+* **D**elete blog posts
 
-* Database creation
+If that's not cool, you can also perform all **CRUD** functionality on your comments! But stay vigilant; your comment is attached to your username, so don't write mean comments on other people's posts because there is simply no anonymity here, folks.
 
-* Database initialization
+You'll find all your blog posts on your personal blog and you'll find everyone's blog posts on your feed. You can create a new blog post anytime by clicking the button in the upper right corner that says "New Blog Post"... tricky!
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Happy blogging!

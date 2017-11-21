@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       session[:user_id] = @user.id
       redirect_to '/', notice: 'Welcome back.'
     else
-      redirect_to '/signin', notice: 'Login Failed.'
+      redirect_to '/signin', notice: 'Login Failed. Username or Password not recognized'
     end
   end
 
