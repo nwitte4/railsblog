@@ -1,15 +1,18 @@
 <p>
-  <strong>Commenter:</strong>
-  <%= comment.commenter %>
+  <small><%= User.find(comment.user_id).username %> says...</small>
 </p>
 
 <p>
-  <strong>Comment:</strong>
-  <%= comment.body %>
+  <small>Comment:</small>
+  <small><%= comment.body %></small>
 </p>
 
 <p>
+  <small>
+    <% if current_user.id == comment.user_id || current_user.id == @post.user_id  %>
   <%= link_to 'Delete Comment', [comment.post, comment],
                method: :delete,
                data: { confirm: 'Are you sure?' } %>
+    <% end %>
+</small>
 </p>
