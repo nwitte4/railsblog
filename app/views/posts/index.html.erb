@@ -1,27 +1,23 @@
-<h1>Listing posts</h1>
+<h1>All Blog Posts</h1>
 
-
-<%= link_to 'New Post', new_post_path %>
+<div class="nav">
+<%= link_to 'Write New Post', new_post_path %>
+</div>
 
 <table>
-  <tr>
-    <th>Title</th>
-    <th>Text</th>
-  </tr>
 
   <% @posts.each do |post| %>
-    <tr>
+    <tr class='text'>
       <td><%= post.title %></td>
-      <td><%= post.text %></td>
       <% if post.user_id %>
-      <td><%= User.find(post.user_id).username %></td>
+      <td><small> Written by: <%= User.find(post.user_id).username %> </small></td>
       <% end %>
-      <td><%= link_to 'Show', post_path(post) %></td>
+      <td><button class="button" type="button" name="button"><%= link_to 'Read', post_path(post) %></button></td>
       <% if current_user.id == post.user_id %>
-      <td><%= link_to 'Edit', edit_post_path(post) %></td>
-      <td><%= link_to 'Delete', post_path(post),
+      <td><button class="button" type="button" name="button"><%= link_to 'Edit', edit_post_path(post) %></button></td>
+      <td><button class="button" type="button" name="button"><%= link_to 'Delete', post_path(post),
               method: :delete,
-              data: { confirm: 'Are you sure?' } %></td>
+              data: { confirm: 'Are you sure?' } %></button></td>
               <% end %>
     </tr>
   <% end %>

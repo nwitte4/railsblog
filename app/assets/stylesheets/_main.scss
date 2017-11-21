@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Homemade+Apple|Poiret+One|Shadows+Into+Light');
+
+body {
+    background: #e8cbc0; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #e8cbc0, #636fa4) fixed; /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #e8cbc0, #636fa4) fixed; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+    // font-family: 'Shadows Into Light', cursive;
+    font-family: 'Poiret One', cursive;
+    font-size: 1.8em;
+    a {
+      text-decoration: none;
+      color: purple;
+    }
+    a:visited {
+      color: purple;
+    }
+    h1{
+      text-align: center;
+    }
+}
+
+.button {
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #888888;
+  font-family: 'Poiret One', cursive;
+  font-size: 12pt;
+}
+.nav{
+  font-family: 'Homemade Apple', cursive;
+  word-spacing: 10px;
+}
+.text{
+  font-family: 'Amatic SC', cursive;
+}

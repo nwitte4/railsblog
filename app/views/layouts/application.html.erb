@@ -9,10 +9,10 @@
   </head>
 
   <body>
-  <nav>
-    <%= link_to 'Log Out', '/logout', {method: 'post', local: true} if logged_in?%>
-    <%= link_to 'Your Feed', '/posts' %>
-    <%= link_to 'My Blog', '/' %>
+  <nav class="nav">
+    <%= link_to ' - Log Out -', '/logout', {method: 'post', local: true} if logged_in?%>
+    <%= link_to ' Feed -', '/posts' %>
+    <%= link_to ' My Blog -', '/' %>
     <% if !logged_in? %>
       <%= link_to 'Sign Up', '/signup' %>
       <%= link_to 'Sign In', '/signin' %>
