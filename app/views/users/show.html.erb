@@ -1,6 +1,7 @@
 <h1>| Welcome, <%= @user.username %> |</h1>
 
-<h3>All Your Blog Posts</h3>
+<h3 class="center">All Your Blog Posts</h3>
+
 <table>
 
   <% @posts.each do |post| %>
@@ -10,5 +11,3 @@
     </tr>
   <% end %>
 </table>
-
-<button class="button" type="button" name="button"><%= link_to 'New Blog Post', new_post_path %></button>

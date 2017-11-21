@@ -1,9 +1,7 @@
+<br>
 <h1>All Blog Posts</h1>
-
-<div class="nav">
-<%= link_to 'Write New Post', new_post_path %>
-</div>
-
+<br>
+<br>
 <table>
 
   <% @posts.each do |post| %>
@@ -18,7 +16,8 @@
       <td><button class="button" type="button" name="button"><%= link_to 'Delete', post_path(post),
               method: :delete,
               data: { confirm: 'Are you sure?' } %></button></td>
-              <% end %>
+      <% end %>
     </tr>
+    <td><small> - <%= post.created_at.localtime.strftime("%B %d, %Y %I:%M %p") %> - </small></td>
   <% end %>
 </table>

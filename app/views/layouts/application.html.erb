@@ -13,6 +13,7 @@
     <%= link_to ' - Log Out -', '/logout', {method: 'post', local: true} if logged_in?%>
     <%= link_to ' Feed -', '/posts' %>
     <%= link_to ' My Blog -', '/' %>
+    <button class="button right" type="button" name="button"><%= link_to 'New Blog Post', new_post_path %></button>
     <% if !logged_in? %>
       <%= link_to 'Sign Up', '/signup' %>
       <%= link_to 'Sign In', '/signin' %>
