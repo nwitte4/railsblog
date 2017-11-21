@@ -1,0 +1,21 @@
+<h1>Dashboard</h1>
+<p>| Welcome <%= @user.username %> |</p>
+
+<h3>All Your Blog Posts</h3>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+
+  <% @posts.each do |post| %>
+    <tr>
+      <td><%= post.title %></td>
+      <td><%= post.text %></td>
+      <td><%= link_to 'Show', post_path(post) %></td>
+      <td><%= link_to 'Edit', edit_post_path(post) %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to 'New Blog Post', new_post_path %>
