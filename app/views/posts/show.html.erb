@@ -5,7 +5,7 @@
   <p class="title"><strong><i><%= @post.title %></i></strong></p>
   <br>
   <div class="post-content">
-    <%= @post.text %>
+    <%= simple_format(@post.text) %>
   </div>
   <br>
   <br>
@@ -15,7 +15,7 @@
           method: :delete,
           data: { confirm: 'Are you sure?' } %></button>
   <% end %>
-  
+
   <h4><u>Comments</u></h4>
       <br>
     <% if @post.comments.any? %>
