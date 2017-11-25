@@ -1,7 +1,7 @@
 
 <%= form_with(model: [ @post, @post.comments.build ]) do |form| %>
   <p>
-    <%= form.text_area :body %>
+    <%= form.text_area :body, :cols => "50", :rows => "4" %>
   </p>
   <p>
     <%= form.submit %>
