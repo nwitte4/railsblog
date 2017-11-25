@@ -1,19 +1,21 @@
-<h1>Sign Up For #Website</h1>
-
+<h1>Sign up to Start Blogging!</h1>
+<br>
+<div class="center">
 <%= form_with(model: @user, local: true) do |f| %>
 
-  <div class="form-group">
+  <div class="form-group border">
     <%= f.label :username%>
     <br>
-    <%= f.text_field :username%>
+    <%= f.text_field :username, placeholder: "Create Username..."%>
   </div>
-  <div class="form-group">
+  <div class="form-group border">
     <%= f.label :password%>
     <br>
-    <%= f.password_field :password%>
+    <%= f.password_field :password, placeholder: "Create Password..."%>
   </div>
   <div class="form-group">
     <%= f.submit "Sign Up" %>
   </div>
 
 <% end %>
+</div>

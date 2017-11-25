@@ -1,5 +1,5 @@
 <br>
-<h1>All Blog Posts</h1>
+<h2>All Blog Posts</h2>
 <br>
 <br>
 <table>
@@ -10,10 +10,10 @@
       <% if post.user_id %>
       <td><small> Written by: <%= User.find(post.user_id).username %> </small></td>
       <% end %>
-      <td><button class="button" type="button" name="button"><%= link_to 'Read', post_path(post) %></button></td>
+      <td><button class="button" type="button" name="button"><%= link_to 'Read', post_path(post) %></button>
       <% if current_user.id == post.user_id %>
-      <td><button class="button" type="button" name="button"><%= link_to 'Edit', edit_post_path(post) %></button></td>
-      <td><button class="button" type="button" name="button"><%= link_to 'Delete', post_path(post),
+      <button class="button" type="button" name="button"><%= link_to 'Edit', edit_post_path(post) %></button>
+      <button class="button" type="button" name="button"><%= link_to 'Delete', post_path(post),
               method: :delete,
               data: { confirm: 'Are you sure?' } %></button></td>
       <% end %>

@@ -1,21 +1,26 @@
-<h1>Sign In</h1>
-
+<h1>Welcome back.</h1>
+<br>
 <div class="center">
   <%= form_tag(sessions_path) do %>
-
-    <div class="form-group">
-      <%= label_tag :username%>
-      <br>
-      <%= text_field_tag :username%>
+  <div class="border">
+    <div class="form-group dark">
+      <%= text_field_tag :username, nil, placeholder: "Enter username" %>
     </div>
-    <div class="form-group">
-      <%= label_tag :password%>
-      <br>
-      <%= password_field_tag :password%>
+    <div class="form-group dark">
+      <%= password_field_tag :password, nil, placeholder: "Enter password"%>
     </div>
     <div class="form-group">
       <%= submit_tag "Sign In" %>
     </div>
+  </div>
 
   <% end %>
+<br>
+  Please enter your username and password to sign into your blogging account.
+<br>
+<br>
+  <button class='button' type="button" name="button">
+    <%= link_to 'New here?', '/signup'%>
+  </button>
+
 </div>

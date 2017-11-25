@@ -1,5 +1,5 @@
-window.users = function(){
-  console.log('hi everyone')
+window.comments = function(){
+  console.log('im the posts js page')
   var buttons = document.getElementById("button");
 
   function clickMe(event){

@@ -5,6 +5,15 @@ class CommentsController < ApplicationController
     @comment.user_id = current_user.id
     @comment.save
 
+    # respond_to do |format|
+    #   if @comment.save
+    #     format.html { redirect_to @post, notice: 'Comment was successfully created.' }
+    #   else
+    #     format.html { redirect_to @post }
+    #     format.json { render json: @post.errors, status: :unprocessable_entity }
+    #   end
+    # end
+
     redirect_to post_path(@post)
   end
 

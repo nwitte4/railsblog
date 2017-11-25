@@ -23,16 +23,35 @@ body {
     h1{
       text-align: center;
     }
+    h2{
+      margin-left: 100px;
+      font-family: 'Homemade Apple', cursive;
+      color: purple;
+      // border: 2px dashed purple;
+      // padding: 8px;
+      display: inline-block;
+    }
 }
 
 .nav{
   font-family: 'Homemade Apple', cursive;
   word-spacing: 10px;
-  margin-left: 5px;
+  margin-left: 8px;
+  margin-top: 8px;
 }
 .text{
   font-family: 'Amatic SC', cursive;
   letter-spacing: 1px;
+  border: 1px dotted purple;
+  background-color:rgba(4,0,0,0.2);
+  // margin: 4vh 2vw auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 50px;
+  grid-gap: 1em;
+  margin-top: 5px;
+  padding-top: 5px;
+
 }
 .button {
   // border-radius: 10px;
@@ -45,8 +64,14 @@ body {
   margin: 10px
 }
 .center{
-  margin: 20px;
+  text-align: center;
 }
 .title{
   text-align: center;
+}
+.border{
+  background-color:rgba(4,0,0,0.2);
+  text-align: center;
+  padding: 35px;
+  display: inline-block;
 }
