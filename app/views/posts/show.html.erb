@@ -6,7 +6,6 @@
   <br>
   <div class="post-content">
     <%= simple_format(@post.text) %>
-  </div>
   <br>
   <br>
   <% if current_user.id == @post.user_id %>
@@ -15,6 +14,7 @@
           method: :delete,
           data: { confirm: 'Are you sure?' } %></button>
   <% end %>
+  </div>
 
   <h4><u>Comments</u></h4>
       <br>
