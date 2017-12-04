@@ -21,6 +21,13 @@ class UsersController < ApplicationController
     end
   end
 
+  def destroy
+    user = User.find_by_id(session[:user_id])
+    user.destroy
+
+    redirect_to '/signup', notice: "Account deleted!"
+  end
+
   private
 
   def user_params

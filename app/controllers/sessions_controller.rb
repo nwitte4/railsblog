@@ -19,4 +19,5 @@ class SessionsController < ApplicationController
     redirect_to '/signin', notice: 'Auf Wiedersehen.'
   end
 
+
 end
