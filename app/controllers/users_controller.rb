@@ -11,6 +11,19 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  def edit
+    @user = current_user
+  end
+
+  def update
+    # @user = current_user
+    # if @user.update_attributes(params[:username])
+    #   redirect_to @user
+    # else
+    #   render 'edit'
+    # end
+  end
+
   def create
     @user = User.new(user_params)
     if @user.save

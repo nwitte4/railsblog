@@ -1,0 +1,15 @@
+<h1>Edit Username</h1>
+<br>
+<div class="center">
+<%= form_with(model: @user, local: true) do |f| %>
+
+  <div class="form-group border">
+    <%= f.label :username%>
+    <br>
+    <%= f.text_field :username, placeholder: "Edit Username..."%>
+  </div>
+    <%= f.submit "Rename" %>
+  </div>
+
+<% end %>
+</div>

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :users, only: [:create, :destroy, :edit]
+  resources :users
   get '/signup', to: 'users#new' # you signup at website/signup
   root to: 'users#show'
 
