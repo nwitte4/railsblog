@@ -17,5 +17,6 @@
   <button class="button" type="button" name="button"><%= link_to 'Delete Account Forever', user_path(@user),
           method: :delete,
           data: { confirm: 'Are you sure?' } %></button>
+  <div><button class="button" type="button" name="button"> <%= link_to 'Edit Your Stuff', edit_user_path(@user) %></button>
 
 </div>

@@ -16,12 +16,13 @@ class UsersController < ApplicationController
   end
 
   def update
-    # @user = current_user
-    # if @user.update_attributes(params[:username])
-    #   redirect_to @user
-    # else
-    #   render 'edit'
-    # end
+    @user = current_user
+    params[:user].delete(:password) if params[:user][:password].blank?
+    if @user.update_attributes(user_params)
+      redirect_to @user
+    else
+      render 'edit', notice: "An error occurred: \n#{@user.errors.full_messages.join(". ")}"
+    end
   end
 
   def create
